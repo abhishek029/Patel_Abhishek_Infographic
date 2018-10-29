@@ -1,16 +1,28 @@
-
-// TweenMax.from(".outer", 1, { scale:0, opacity:0});
-// TweenMax.from(".inner", 1, { scale:2, opacity:0});
-// TweenMax.from(".circleText", 0.5, { scale:0, opacity:0, ease: Bounce});
-// TweenMax.from("#barChart", 0.5, {scale:0,x:200,y:200,delay:1})
-// TweenMax.staggerFrom(".bars", 1, {opacity:0,x:-200, y:200,delay:1.5}, 0.2);
-
+//main title
+TweenMax.staggerFrom(".mainTitle", 0.8, {opacity:0,scale:0,x:-10,y:-100},0.1);
 
 //default values of bars
 TweenMax.to("#twentybar, #bar", 1, {y:33.3,height:20, ease:Bounce.easeOut});
 TweenMax.to("#thirtyFive_1_, #bar_3_", 1, {y:105.5,height:20, ease:Bounce.easeOut});
 TweenMax.to("#fourtySeven_1_, #bar_2_", 1, {y:162,height:20, ease:Bounce.easeOut});
 TweenMax.to("#ninetyTwo_1_, #bar_1_", 1, {y:289,height:20, ease:Bounce.easeOut});
+
+// default style for headings and its info
+
+TweenMax.to("#yellowInfo", 1, {opacity:0,y:70});
+TweenMax.to("#yellowHeading", 1, {y:70,x:20,scale:0.8});
+
+TweenMax.to("#orangeInfo", 1, {opacity:0,y:70});
+TweenMax.to("#orangeHeading", 1, {y:70,x:10,scale:0.8});
+
+TweenMax.to("#skyInfo", 1, {opacity:0,y:70});
+TweenMax.to("#skyHeading", 1, {y:70,x:20,scale:0.8});
+
+TweenMax.to("#lightBlueInfo", 1, {opacity:0,y:70});
+TweenMax.to("#lighBlueHeading", 1, {y:70,x:10,scale:0.8});
+
+TweenMax.to("#blueInfo", 1, {opacity:0,y:100});
+TweenMax.to("#blueHeading", 1, {y:110,x:20,scale:0.8});
 
 
 //variables for circles
@@ -19,6 +31,7 @@ var orangeCircle = document.querySelector("#orangeCircle");
 var yellowCircle = document.querySelector("#yellowCircle");
 var pinkCircle = document.querySelector("#pinkCircle");
 var barChart = document.querySelector("#barChart");
+
 
 
 //hover circle to increse height of bars for blue
@@ -69,6 +82,90 @@ function barChartOut(){
     TweenMax.to("#ninetyTwo_1_, #bar_1_", 1, {y:289,height:20, ease:Bounce.easeOut});
 }
 
+//function for thumbnail hover
+
+function yellowThumbnailMouseOver(){
+    TweenMax.to("#yellowInfo", 1, {opacity:1,y:0});
+    TweenMax.to("#yellowHeading", 1, {y:0,x:0,scale:1});
+}
+function yellowThumbnailMouseOut(){
+    TweenMax.to("#yellowInfo", 1, {opacity:0,y:70});
+    TweenMax.to("#yellowHeading", 1, {y:70,x:20,scale:0.8});
+}
+
+
+function orangeThumbnailMouseOver(){
+    TweenMax.to("#orangeInfo", 1, {opacity:1,y:0});
+    TweenMax.to("#orangeHeading", 1, {y:0,x:0,scale:1});
+}
+function orangeThumbnailMouseOut(){
+    TweenMax.to("#orangeInfo", 1, {opacity:0,y:70});
+    TweenMax.to("#orangeHeading", 1, {y:70,x:10,scale:0.8});
+}
+
+function skyThumbnailMouseOver(){
+    TweenMax.to("#skyInfo", 1, {opacity:1,y:0});
+    TweenMax.to("#skyHeading", 1, {y:0,x:0,scale:1});
+}
+function skyThumbnailMouseOut(){
+    TweenMax.to("#skyInfo", 1, {opacity:0,y:70});
+    TweenMax.to("#skyHeading", 1, {y:70,x:20,scale:0.8});
+}
+
+function lightBlueThumbnailMouseOver(){
+    TweenMax.to("#lightBlueInfo", 1, {opacity:1,y:0});
+    TweenMax.to("#lighBlueHeading", 1, {y:0,x:0,scale:1});
+}
+function lightBlueThumbnailMouseOut(){   
+    TweenMax.to("#lightBlueInfo", 1, {opacity:0,y:70});
+    TweenMax.to("#lighBlueHeading", 1, {y:70,x:10,scale:0.8});
+}
+
+
+function blueThumbnailMouseOver(){
+    TweenMax.to("#blueInfo", 1, {opacity:1,y:0});
+    TweenMax.to("#blueHeading", 1, {y:0,x:0,scale:1});
+}
+function blueThumbnailMouseOut(){
+    TweenMax.to("#blueInfo", 1, {opacity:0,y:100});
+    TweenMax.to("#blueHeading", 1, {y:110,x:20,scale:0.8});
+}
+
+// functions for filling circle according to bars
+
+function pinkBarMouseOver(){
+    TweenMax.to("#outer", 1, {fill:'#FF00FF'});
+}
+
+function pinkBarMouseOut(){
+    TweenMax.to("#outer", 1, {fill:'#FFFFFF'});
+}
+
+function yellowBarMouseOver(){
+    TweenMax.to("#outer_6_", 1, {fill:'#FCEE21'});
+}
+
+function yellowBarMouseOut(){
+    TweenMax.to("#outer_6_", 1, {fill:'#FFFFFF'});
+}
+
+function orangeBarMouseOver(){
+    TweenMax.to("#outer_2_", 1, {fill:'#F15A24'});
+}
+
+function orangeBarMouseOut(){
+    TweenMax.to("#outer_2_", 1, {fill:'#FFFFFF'});
+}
+
+function blueBarMouseOver(){
+    TweenMax.to("#outer_3_", 1, {fill:'#1B1464'});
+}
+
+function blueBarMouseOut(){
+    TweenMax.to("#outer_3_", 1, {fill:'#FFFFFF'});
+}
+
+
 //listener for blue circle
 blueCircle.addEventListener("mouseover", blueCircleOver);
 blueCircle.addEventListener("mouseout", blueCircleOut);
@@ -90,3 +187,46 @@ pinkCircle.addEventListener("mouseout", pinkCircleOut);
 
 barChart.addEventListener("mouseover", barChartOver);
 barChart.addEventListener("mouseout",barChartOut);
+
+//listener for thumbnail hover to display info
+
+
+document.querySelector("#yellowIcon").addEventListener("mouseover", yellowThumbnailMouseOver);
+document.querySelector("#yellowIcon").addEventListener("mouseout", yellowThumbnailMouseOut);
+document.querySelector("#yellowThumbnail").addEventListener("mouseover", yellowThumbnailMouseOver);
+document.querySelector("#yellowThumbnail").addEventListener("mouseout", yellowThumbnailMouseOut);
+
+document.querySelector("#orangeIcon").addEventListener("mouseover", orangeThumbnailMouseOver);
+document.querySelector("#orangeIcon").addEventListener("mouseout", orangeThumbnailMouseOut);
+document.querySelector("#orangeThumbnail").addEventListener("mouseover", orangeThumbnailMouseOver);
+document.querySelector("#orangeThumbnail").addEventListener("mouseout", orangeThumbnailMouseOut);
+
+document.querySelector("#sktIcon").addEventListener("mouseover", skyThumbnailMouseOver);
+document.querySelector("#sktIcon").addEventListener("mouseout", skyThumbnailMouseOut);
+document.querySelector("#skyThumbnail").addEventListener("mouseover", skyThumbnailMouseOver);
+document.querySelector("#skyThumbnail").addEventListener("mouseout", skyThumbnailMouseOut);
+
+document.querySelector("#lightBlueIcon").addEventListener("mouseover", lightBlueThumbnailMouseOver);
+document.querySelector("#lightBlueIcon").addEventListener("mouseout", lightBlueThumbnailMouseOut);
+document.querySelector("#lightBlueThumbnail").addEventListener("mouseover", lightBlueThumbnailMouseOver);
+document.querySelector("#lightBlueThumbnail").addEventListener("mouseout", lightBlueThumbnailMouseOut);
+
+document.querySelector("#blueIcon").addEventListener("mouseover", blueThumbnailMouseOver);
+document.querySelector("#blueIcon").addEventListener("mouseout", blueThumbnailMouseOut);
+document.querySelector("#blueThumbnail").addEventListener("mouseover", blueThumbnailMouseOver);
+document.querySelector("#blueThumbnail").addEventListener("mouseout", blueThumbnailMouseOut);
+
+
+// listeners for filling circle according to bars
+
+document.querySelector("#bar_1_").addEventListener("mouseover", pinkBarMouseOver);
+document.querySelector("#bar_1_").addEventListener("mouseout", pinkBarMouseOut);
+
+document.querySelector("#bar_2_").addEventListener("mouseover", yellowBarMouseOver);
+document.querySelector("#bar_2_").addEventListener("mouseout", yellowBarMouseOut);
+
+document.querySelector("#bar_3_").addEventListener("mouseover", orangeBarMouseOver);
+document.querySelector("#bar_3_").addEventListener("mouseout", orangeBarMouseOut);
+
+document.querySelector("#bar").addEventListener("mouseover", blueBarMouseOver);
+document.querySelector("#bar").addEventListener("mouseout", blueBarMouseOut);
