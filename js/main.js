@@ -87,48 +87,58 @@ function barChartOut(){
 function yellowThumbnailMouseOver(){
     TweenMax.to("#yellowInfo", 1, {opacity:1,y:0});
     TweenMax.to("#yellowHeading", 1, {y:0,x:0,scale:1});
+    TweenMax.to("#yellowThumbnail", 1.5, {scale:1.3});
 }
 function yellowThumbnailMouseOut(){
     TweenMax.to("#yellowInfo", 1, {opacity:0,y:70});
     TweenMax.to("#yellowHeading", 1, {y:70,x:20,scale:0.8});
+    TweenMax.to("#yellowThumbnail", 1, {scale:1});
 }
 
 
 function orangeThumbnailMouseOver(){
     TweenMax.to("#orangeInfo", 1, {opacity:1,y:0});
     TweenMax.to("#orangeHeading", 1, {y:0,x:0,scale:1});
+    TweenMax.to("#orangeThumbnail", 1.5, {scale:1.3});
 }
 function orangeThumbnailMouseOut(){
     TweenMax.to("#orangeInfo", 1, {opacity:0,y:70});
     TweenMax.to("#orangeHeading", 1, {y:70,x:10,scale:0.8});
+    TweenMax.to("#orangeThumbnail", 1.5, {scale:1});
 }
 
 function skyThumbnailMouseOver(){
     TweenMax.to("#skyInfo", 1, {opacity:1,y:0});
     TweenMax.to("#skyHeading", 1, {y:0,x:0,scale:1});
+    TweenMax.to("#skyThumbnail", 1.5, {scale:1.3});
 }
 function skyThumbnailMouseOut(){
     TweenMax.to("#skyInfo", 1, {opacity:0,y:70});
     TweenMax.to("#skyHeading", 1, {y:70,x:20,scale:0.8});
+    TweenMax.to("#skyThumbnail", 1.5, {scale:1});
 }
 
 function lightBlueThumbnailMouseOver(){
     TweenMax.to("#lightBlueInfo", 1, {opacity:1,y:0});
     TweenMax.to("#lighBlueHeading", 1, {y:0,x:0,scale:1});
+    TweenMax.to("#lightBlueThumbnail", 1.5, {scale:1.3});
 }
 function lightBlueThumbnailMouseOut(){   
     TweenMax.to("#lightBlueInfo", 1, {opacity:0,y:70});
     TweenMax.to("#lighBlueHeading", 1, {y:70,x:10,scale:0.8});
+    TweenMax.to("#lightBlueThumbnail", 1.5, {scale:1});
 }
 
 
 function blueThumbnailMouseOver(){
     TweenMax.to("#blueInfo", 1, {opacity:1,y:0});
     TweenMax.to("#blueHeading", 1, {y:0,x:0,scale:1});
+    TweenMax.to("#blueThumbnail", 1.5, {scale:1.3});
 }
 function blueThumbnailMouseOut(){
     TweenMax.to("#blueInfo", 1, {opacity:0,y:100});
     TweenMax.to("#blueHeading", 1, {y:110,x:20,scale:0.8});
+    TweenMax.to("#blueThumbnail", 1.5, {scale:1});
 }
 
 // functions for filling circle according to bars
