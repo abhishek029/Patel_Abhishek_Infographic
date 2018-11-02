@@ -15,4 +15,4 @@ One page infographic design with svg and add animation where required
 
 
 **Link to Repo 
-
+https://github.com/abhishek029/infographic.git
