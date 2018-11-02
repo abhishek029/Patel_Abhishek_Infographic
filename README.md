@@ -1,4 +1,18 @@
-#infographic
+# Infographic Poster
 
-create SVG poster and animated it according to its information and bring data from database
+One page infographic design with svg and add animation where required
+
+## Built With
+
+* [Foundation](https://foundation.zurb.com/) - The web framework used
+* [PHP]- Grabing data from database
+
+
+## Development Team
+
+* **Abhi Patel** - *Developer* 
+
+
+
+**Link to Repo 
 
