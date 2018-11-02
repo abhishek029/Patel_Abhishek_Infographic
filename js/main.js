@@ -1,3 +1,37 @@
+// bringing promo text from database
+
+const promoText = document.querySelector("#promoText");
+
+
+function addingPromoText(){
+    console.log("gv");
+    fetch(`./includes/connect.php`)
+    .then(res => res.json())
+    .then(data => {
+        // just to check data is coming or not
+        console.log(data[0]);
+
+        // divided data into different feilds
+        const {promo_id, promo_title, promo_label, promo_text} = data[0]
+        // assigned html data to page
+        document.querySelector("#promoLabel").textContent = promo_label;
+        document.querySelector("#promoText").textContent = promo_text;
+    })
+    .catch(function(error){
+        console.error(error);
+    });
+
+    
+}
+addingPromoText();
+
+
+
+
+
+
+
+
 //main title
 TweenMax.staggerFrom(".mainTitle", 0.8, {opacity:0,scale:0,x:-10,y:-100},0.1);
 
