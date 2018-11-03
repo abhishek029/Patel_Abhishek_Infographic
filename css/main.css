@@ -1,4 +1,12 @@
 #promoSection{
-    margin-top: 100px;
-    padding: 100px;
+    margin-top: 80px;
+}
+h2, #promoText , #promoLabel{
+    font-weight: bold;
+    color: #090747;
+}
+
+#promoLabel{
+    font-size: 40px;
+    border-right: 5px solid  #090747;
 }

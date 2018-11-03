@@ -4,12 +4,12 @@ const promoText = document.querySelector("#promoText");
 
 
 function addingPromoText(){
-    console.log("gv");
+    
     fetch(`./includes/connect.php`)
     .then(res => res.json())
     .then(data => {
         // just to check data is coming or not
-        console.log(data[0]);
+        // console.log(data[0]);
 
         // divided data into different feilds
         const {promo_id, promo_title, promo_label, promo_text} = data[0]
@@ -26,14 +26,9 @@ function addingPromoText(){
 addingPromoText();
 
 
+TweenMax.from("#promoText", 1, {scale:0});
+// TweenMax.to("#promoSection", 3, {backgroundColor:'red'});
 
-
-
-
-
-
-//main title
-TweenMax.staggerFrom(".mainTitle", 0.8, {opacity:0,scale:0,x:-10,y:-100},0.1);
 
 //default values of bars
 TweenMax.to("#twentybar, #bar", 1, {y:33.3,height:20, ease:Bounce.easeOut});
