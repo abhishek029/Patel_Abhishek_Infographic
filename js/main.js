@@ -24,10 +24,10 @@ function addingPromoText(){
     
 }
 addingPromoText();
-
-
-TweenMax.from("#promoText", 1, {scale:0});
-// TweenMax.to("#promoSection", 3, {backgroundColor:'red'});
+// Styles for title section
+TweenMax.from("#title", 1, {y:-100});
+TweenMax.to("#infuluncer-marketing", 0.1, {opacity:1, y:-100, delay:0.8});
+TweenMax.from("#promoSection", 1, {opacity:0,delay:0.5});
 
 
 //default values of bars
