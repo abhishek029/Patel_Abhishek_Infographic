@@ -1,7 +1,6 @@
-# Infographic Poster
+# Infographic Poster(INFULANCE MARKETING)
 
 One page infographic design with svg and add animation where required.
-Infographic - # INFULANCE MARKETING
 
 # Functions
 
